@@ -29,6 +29,8 @@ class Login {
 			document.getElementById('l2').className = "invisivel";
 			document.getElementById('l1').className = "invisivel";
 			document.getElementById('img_menus').className = "visivel";
+			document.getElementById('dlogin').className = "invisivel";
+			document.getElementById('emp').className = "visivel";
 			if (user[veri].genero == "Masculino") {
 				document.getElementById('an').className = "invisivel";
 				document.getElementById('fem').className = "invisivel";
@@ -46,8 +48,6 @@ class Login {
 			}
 			np.value = user[veri].nome;
 			cp.value = user[veri].conta;
-			document.getElementById('login').className = "invisivel";
-			document.getElementById('emp').className = "visivel";
 		}
 		if (k == 1) {
 			document.getElementById('l2').className = "invisivel";
@@ -72,14 +72,13 @@ function sairc() {
 	conf = confirm("Deseja mesmo sair da conta?")
 	if (conf == true) {
 		document.getElementById('emp').className = "invisivel";
-		document.getElementById('menu').className = "visivel";
+		document.getElementById('dmenu').className = "visivel";
 		cp.value = "";
 		np.value = "";
 		document.getElementById('conec').className = "invisivel";
 		document.getElementById('desconec').className = "visivel";
-		document.getElementById('img_menus').className = "invisivel";
 		document.getElementById('mas').className = "invisivel";
 		document.getElementById('fem').className = "invisivel";
-		document.getElementById('an').className = "invisivel";
+		document.getElementById('an').className = "visivel";
 	}
 }

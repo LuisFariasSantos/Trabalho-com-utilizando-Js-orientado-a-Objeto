@@ -5,21 +5,24 @@ h1
 }
 body 
 {
-  animation-duration: 3s;
-  animation-name: slidein;
-  background-image:url('imagens/pedecoqueiro.jpg');
-  font-family:fantasy;
+  	font:cursive;
+	cursor: crosshair;
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(to top right,rgb(40, 10, 192),#2f8eb4,#fffb00);
+    background-size:400% 400%;
+    animation:fundo 15s ease-in-out infinite;
 }
-@keyframes slidein
-{
-  from {
-    margin-bottom:0px;
-    margin-top:100%;
-}
-  to {
-    margin-top: 0px;
-    margin-bottom:100%;
-  }
+@keyframes fundo{
+    0%{
+        background-position:0 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0 50%;
+    }
 }
 #s
 {
@@ -30,22 +33,11 @@ body
 	color: white;
   	text-shadow: rgba(1220,100,128, .8) 0px 0px 4px;
 }
-#fr
-{
-	float:right;
-}
-div
-{
-	margin:0 auto;
-	color:white;
-	background-color:rgba(0,0,0,0.9);
-	padding:15px;
-}
 button
 {
 	-webkit-transition-duration: 0.4s;
 	border-radius:30px;
-	border-color:blue;
+	border-color:black;
 	background-color:#3B5990;
 	font-size:15px;
 }
@@ -60,23 +52,28 @@ button
 }
 #exi,#err,#cor,#l1,#l2,#pre
 {
-	animation-name:busis;
+	animation-name:opa;
 	animation-duration:4s;
-}
-@keyframes busis
-{
-	0%{opacity:0}
-	100%{opacity:1}
+	font-size:16pt;
 }
 #menu
 {
 	border:solid;
-	border-radius:70px;
-	margin:0 auto;
 	width:300px;
 	animation-name:vinicius;
 	animation-duration:2s;
 	animation-iteration-count:infinite;
+	display:flex;
+    flex-direction:column;
+    padding:15px;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+	align-items:center;
+	border-radius:10px;
+	box-shadow:blue 1px 1px 90px 1px;
+	background-color:rgba(50,50,120,0.3)
 }
 #emp
 {
@@ -84,15 +81,34 @@ button
 	font-family: cursive;
 	animation-name:opa;
 	animation-duration:2s;
+	position: absolute;
+	top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
+	box-shadow:blue 1px 1px 90px 1px;
+	background-color:rgba(50,50,120,0.3);
+	padding:15px;
+	border: 10px solid transparent;
+	border-image: url('imagens/border cópia1.png')30 round;
 }
 #cadastro
 {
 	animation-name:opa;
 	animation-duration:2s;
-	width:380px;
+	width:30%;
 	text-shadow: rgba(250,100,18, .8) 0px 0px 4px;
 	border: 10px solid transparent;
 	border-image: url('imagens/border cópia2.png')30 round;
+	display:flex;
+    flex-direction:column;
+    padding:15px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+	align-items:center;
+	box-shadow:blue 1px 1px 90px 1px;
+	background-color:rgba(50,50,120,0.3)
 }
 #login
 {
@@ -102,13 +118,35 @@ button
 	width: 250px;
 	border: 10px solid transparent;
 	border-image: url('imagens/border cópia1.png')30 round;
+	display:flex;
+    flex-direction:column;
+    padding:15px;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+	align-items:center;
+	box-shadow:blue 1px 1px 90px 1px;
+	background-color:rgba(50,50,120,0.3)
 }
 #cri,#ido,#ma
 {
-	width:500px;
 	font-family:cursive;
 	animation-name:opa;
 	animation-duration:2s;
+	display:flex;
+    flex-direction:column;
+    padding:15px;
+    position: absolute;
+    left:50%;
+    top:65%;
+    transform:translate(-50%,-50%);
+	align-items: center;
+	box-shadow:blue 1px 1px 90px 1px;
+	background-color:rgba(50,50,120,0.3);
+	border: 10px solid transparent;
+	border-image: url('imagens/border cópia1.png')30 round;
+	width:47%;
 }
 @keyframes opa
 {
@@ -143,10 +181,6 @@ button:hover
 {
 	display:block;
 }
-.centro
-{
-	margin:0 auto;
-}
 #exi,#err,#cor,#l1,#l2,#pre
 {
 	text-align:center;
@@ -156,22 +190,16 @@ button:hover
 }
 #cor
 {
-	color:#00a000;
+	color:black;
+	text-shadow: none;
+	font-family: cursive;
+	box-shadow: rgba(50,50,120,0.3) 10px,20px,10px;
 }
 .anima
 {
 	display:block;
 	animation-name:opa;
 	animation-duration:2s;
-}
-table
-{
-	color:white;
-}
-fieldset
-{
-	border:none;
-	width:300px;
 }
 #cp,#np
 {
@@ -184,7 +212,33 @@ fieldset
 #a1,#a2,#a3
 {
 	border-radius:4px;
-	border-color:green;
+	border-color:blue;
+	font-family:Verdana;
+	font-weight:bold;
+	font-size:13px;
+	padding:6px 10px;
+	-webkit-transition-duration: 0.4s;
+}
+#a1:hover,#a2:hover,#a3:hover{
+	transition-duration:1.2s;
+	color:white;
+	box-shadow: grey 1px 1px 30px 1px;
+	background-color:black;
+	border-color:white;
+}
+#most{
+	border-color:black;
+	border-radius:4px;
+	background:linear-gradient(to bottom, #15b407 5%, #d0ff00 100%);
+	box-shadow:inset 0px 1px 0px 0px #d7ecfd;
+	text-shadow:0px 1px 0px #528009;  
+	-webkit-transition-duration: 0.4s;
+}
+#most:hover{
+	transition-duration:1s;
+	background:linear-gradient(to bottom, #960f0a 5%, #2b0a69 100%);
+	font-size:15px;
+	color:white;
 }
 .spas
 {
@@ -195,10 +249,68 @@ fieldset
 	border:1px;
 	border-top:solid;
 }
-#mostrar
-{
-	background-color: rgba(0,0,0,0);
+:placeholder-shown{
+	border-color:red;
 }
-input{
-	margin: 0 auto;
+#cl,#ls{
+	margin:5px;
+}
+#img_menus{
+	position:fixed;
+	top:0px;
+	right:0px;
+	background-color:rgba(40,50,40,0.5);
+	padding: 5px;
+	border:solid black;
+	width:300px;
+	height:130px;
+	margin-right:0px;
+}
+#an,#mas,#fem{
+	width:100%;
+	height:70px;
+}
+input:active{
+	border-color:mediumvioletred;
+}
+input:enabled{
+	padding:6px;
+}
+#conec,#desconec{
+	font-family:monospace;
+	font-size:15pt;
+	color:black;
+	margin:2px;
+}
+th{
+	padding:10px;;
+}
+#tdn,#tdc{
+	display: flex;
+	justify-content: baseline;
+}
+#label1,#label2{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size:10pt;
+	text-transform:uppercase;
+}
+#leite,#alimentos,#roupa,#dinheiro,#brinquedos{
+	
+}
+li{
+	margin:15px;
+}
+.doa{
+	border-color:black;
+	border-radius:4px;
+	background:linear-gradient(60deg, #c2cf10 5%, #ce3ad3 100%);
+	box-shadow:inset 0px 1px 0px 0px #d7ecfd;
+	text-shadow:0px 1px 0px #528009;  
+	-webkit-transition-duration: 0.4s;
+}
+.doa:hover{
+	transition-duration:1s;
+	background:linear-gradient(to bottom, #080666 5%, #5e0351 100%);
+	font-size:15px;
+	color:white;
 }
